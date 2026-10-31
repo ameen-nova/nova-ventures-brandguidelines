@@ -56,17 +56,22 @@ Dark layouts may invert to navy-dominant.
 Contrast: text must meet WCAG AA (4.5:1, or 3:1 at 24 px+). Never Nova Blue
 text on Navy (2.6:1). Never Silver text on White (1.8:1).
 No colours outside this list. No purple, teal, neon or rainbow gradients.
-HOT PINK ACCENT (about 2% of a layout; visible enough to create distinction,
-restrained enough to never overpower the brand):
-- Use for: the short dash (2 to 3 px line under labels, taglines, sign-offs) ·
-  one supporting shard per composition, never the largest · the headline
-  highlight now and then, instead of blue · small physical details (notebook
-  elastic, clips, lanyard lining, card edges).
-- Never in: the logo · body text, links, buttons, icons · backgrounds, large
-  shapes, photography · gradients, or mixed with blue inside one shard.
-- Contrast: 4.9:1 on Midnight (any size) · 3.5:1 on White (24 px and up only).
-- Most pieces have one pink moment, some none. If pink is the first thing you
-  notice, use less.
+HOT PINK ACCENT #FF2D8A (shard facet #D61F72). Pink has one job: it marks
+the point. Always a small mark, never an area. Four uses:
+- The start: the short dash (2 to 3 px) under a label, eyebrow or tagline;
+  chapter and section openers.
+- Where you are: active menu item, current step, current carousel dot or
+  slide number.
+- What matters: the headline highlight now and then (instead of blue), the one
+  chart value that matters, one supporting shard (never the largest).
+- The finish: sign-offs, card edge, letterhead foot, envelope flap, folder
+  spine, notebook elastic, lanyard lining, clips.
+How much: up to two pink moments per layout, each doing a different job; many
+pieces need one. If pink is the biggest thing or the first thing you notice,
+use less. If a pink element does none of the four jobs, remove it.
+Never in: the logo · buttons, links, body text, icons · backgrounds, large
+shapes, photography · gradients, or mixed with blue inside one shard.
+Contrast: 4.9:1 on Midnight (any size) · 3.5:1 on White (24 px and up only).
 
 3. TYPOGRAPHY
 - Arsenal Regular (400) for display, H1, H2, statements, at 28 px and above.
@@ -817,6 +822,7 @@ svg.nf { display: block; }
 .ex-foot { width: 100%; display: flex; justify-content: space-between; align-items: flex-end; gap: 1em; color: var(--silver); }
 .ex-foot b { color: var(--white); }
 .ex-pg { font-weight: 700; letter-spacing: .1em; color: var(--slate); }
+.ex-pg b { color: var(--hot-pink); }
 .ex-num { font-family: var(--font-display); line-height: 1; color: var(--nova-blue); }
 .ex figcaption, .ex-cap { margin-top: 10px; font-size: 13.5px; line-height: 1.45; color: var(--slate); }
 .ex figcaption b, .ex-cap b { display: block; font: 700 11px var(--font-body); letter-spacing: .16em; text-transform: uppercase; color: var(--nova-blue); margin-bottom: 3px; }
@@ -1276,7 +1282,7 @@ svg.nf { display: block; }
     </div>
 
     <div class="block" id="accent">
-      <div class="block-head"><p class="eyebrow">Accent colour</p><h3>Hot Pink: seen, not noticed</h3><p>One warm accent runs quietly through the whole brand. It adds energy and personality to a professional blue identity without ever taking over: a short dash under a label, one shard in a composition, the highlight in some headlines, the elastic on a notebook. Visible enough to create distinction, restrained enough to never overpower the brand. It is never part of the logo.</p></div>
+      <div class="block-head"><p class="eyebrow">Accent colour</p><h3>Hot Pink: seen, not noticed</h3><p>One warm accent runs quietly through the whole brand. Pink has one job: it marks the point. It shows where a message starts, where you are, what matters and where Nova signs off, always as a small mark and never as an area. Visible enough to create distinction, restrained enough to never overpower the brand. It is never part of the logo.</p></div>
       <div class="acc-top">
         <div class="swatches" style="grid-template-columns:minmax(0,1fr)">
           <div class="sw">
@@ -1290,38 +1296,57 @@ svg.nf { display: block; }
         </div>
         <div class="ex-row" style="margin:0">
           <figure class="ex" style="--r:.7071"><div class="ex-f" style="background:var(--white)">
-              <svg class="nf ex-bg" viewBox="0 0 400 566" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#shard" transform="translate(300 470) rotate(-24) scale(5.6 5.6)" style="--a:#DCEBFF;--b:#D9DDE3"/><use href="#shard" transform="translate(330 560) rotate(-24) scale(5.8 5.8)" style="--a:#1C63D3;--b:#0F45A3"/><use href="#shard" transform="translate(395 395) rotate(-24) scale(2.6 2.6)" style="--a:#FF2D8A;--b:#D61F72"/></svg>
+              <svg class="nf ex-bg" viewBox="0 0 400 566" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#shard" transform="translate(300 470) rotate(-24) scale(5.6 5.6)" style="--a:#DCEBFF;--b:#D9DDE3"/><use href="#shard" transform="translate(330 560) rotate(-24) scale(5.8 5.8)" style="--a:#1C63D3;--b:#0F45A3"/></svg>
               <div class="ex-c" style="padding:8cqw">
                 <div class="ex-top" style="align-items:flex-start"><img class="ex-lg" style="width:30cqw" src="Nova%20Ventures%20Logo%20Package/01%20Horizontal/SVG/NovaVentures_Horizontal_FullColour.svg" alt="Nova Ventures"><span class="acc-tag" style="font-size:2.3cqw">UAE business<br>setup consultancy<i></i></span></div>
                 <p class="ex-h" style="font-size:10.5cqw;margin-top:12cqw">Your UAE business setup, <em class="pk">made simpler.</em></p>
                 <p class="ex-p" style="font-size:3.6cqw;margin-top:4cqw">Clear guidance from people who understand the process.</p>
-              </div></div><figcaption><b>Brochure cover</b>A pink highlight and one supporting pink shard.</figcaption></figure>
+              </div></div><figcaption><b>Brochure cover</b>The start (tagline dash) and what matters (the highlight). Two moments, two jobs.</figcaption></figure>
           <figure class="ex" style="--r:.5625"><div class="ex-f" style="background:var(--midnight)">
               <svg class="nf ex-bg" viewBox="0 0 360 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#shard" transform="translate(320 150) rotate(-24) scale(4.2 4.2)" style="--a:#102A50;--b:#0F45A3"/><use href="#shard" transform="translate(360 245) rotate(-24) scale(2 2)" style="--a:#1C63D3;--b:#0F45A3"/></svg>
               <div class="ex-c dark" style="padding:9cqw">
                 <img class="ex-lg" style="width:36cqw" src="Nova%20Ventures%20Logo%20Package/01%20Horizontal/SVG/NovaVentures_Horizontal_Reversed.svg" alt="Nova Ventures">
                 <p class="ex-h" style="font-size:12cqw;margin-top:auto">Your UAE business setup, <em class="pk">made simpler.</em></p>
                 <i class="acc-dash" style="margin-top:6cqw"></i>
-              </div></div><figcaption><b>Story</b>Pink highlight and the short dash on Midnight.</figcaption></figure>
+              </div></div><figcaption><b>Story</b>What matters (highlight) and the finish (closing dash).</figcaption></figure>
           <figure class="ex" style="--r:1.5455"><div class="ex-f" style="background:var(--navy)">
               <div class="ex-c dark" style="padding:9cqw">
                 <img class="ex-lg" style="width:34cqw" src="Nova%20Ventures%20Logo%20Package/01%20Horizontal/SVG/NovaVentures_Horizontal_Reversed.svg" alt="Nova Ventures">
                 <div style="margin-top:auto"><p class="ex-h" style="font-size:7cqw">[Name Surname]</p><p class="acc-role" style="font-size:3.6cqw;color:var(--silver)">Business setup advisor</p><i class="acc-dash" style="margin-top:4cqw;width:8cqw"></i><p class="acc-det" style="font-size:3.4cqw;color:var(--white)">[phone] · [email]</p></div>
-              </div></div><figcaption><b>Business card</b>Only the dash: most pieces need no more than this.</figcaption></figure>
+              </div></div><figcaption><b>Business card</b>Only the finish: one dash is often enough.</figcaption></figure>
         </div>
       </div>
+      <div class="grid g4 acc-jobs">
+        <div class="card"><p class="eyebrow">01 · The start</p><h4>A message begins here</h4><p>The short dash under a label, eyebrow or tagline. Chapter and section openers.</p></div>
+        <div class="card"><p class="eyebrow">02 · Where you are</p><h4>You are here</h4><p>The active menu item, the current step in a process, the current carousel dot or slide number.</p></div>
+        <div class="card"><p class="eyebrow">03 · What matters</p><h4>Look at this one thing</h4><p>The headline highlight now and then, the one chart value that matters, one supporting shard.</p></div>
+        <div class="card"><p class="eyebrow">04 · The finish</p><h4>Signed, Nova</h4><p>Sign-offs, a card edge, a letterhead foot, an envelope flap, a folder spine, a notebook elastic.</p></div>
+      </div>
+      <div class="tablebox">
+        <table class="datatable">
+          <thead><tr><th>Touchpoint</th><th>Where the pink goes</th></tr></thead>
+          <tbody>
+            <tr><td>Website</td><td>Dash under section labels, active menu underline, current step in “how it works” and form progress, one shard in the hero</td></tr>
+            <tr><td>Social</td><td>Dash under the label, current carousel dot or slide number, the headline highlight sometimes, one small shard</td></tr>
+            <tr><td>Presentations</td><td>Dash on the title slide, section number or progress marker, the key value in a chart</td></tr>
+            <tr><td>Stationery</td><td>Card edge or dash under the name, letterhead foot, envelope flap, folder spine</td></tr>
+            <tr><td>Merchandise</td><td>Elastic, ribbon bookmark, lanyard lining, clips. Small items can be fully pink; larger ones get a pink detail only</td></tr>
+            <tr><td>Office &amp; signage</td><td>A thin line in wayfinding, one detail at reception</td></tr>
+            <tr><td>Video</td><td>A dash or shard as the transition, a marker on lower-thirds</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="ex-rules">
-        <div><p class="eyebrow">Where it appears</p><ul class="needs">
-          <li>The short dash: a 2–3 px pink line under labels, taglines and sign-offs. The brand’s quiet signature.</li>
-          <li>One supporting shard in a composition, flat Hot Pink with a #D61F72 facet. Never the largest shard.</li>
-          <li>The highlight phrase in some headlines, instead of blue. Headline sizes only (24 px and up) on light backgrounds.</li>
-          <li>Small physical details: notebook elastics, clips, lanyard linings, card edges.</li>
+        <div><p class="eyebrow">How much</p><ul class="needs">
+          <li>Up to two pink moments in a layout, each doing a different job. Many pieces need only one.</li>
+          <li>Always a mark, never an area: if the pink is the biggest thing or the first thing you notice, take some out.</li>
+          <li>If a pink element doesn’t do one of the four jobs, it doesn’t belong.</li>
         </ul></div>
         <div><p class="eyebrow">Where it stays out</p><ul class="needs">
           <li>The logo, in every version.</li>
-          <li>Body text, links, buttons and icons.</li>
+          <li>Buttons, links, body text and icons.</li>
           <li>Backgrounds, large shapes and photography.</li>
-          <li>Gradients, or pink mixed with blue inside one shard. Most pieces have one pink moment, some have none: if it is the first thing you notice, take some out.</li>
+          <li>Gradients, or pink mixed with blue inside one shard.</li>
         </ul></div>
       </div>
     </div>
@@ -2118,26 +2143,26 @@ svg.nf { display: block; }
         <figure class="ex" style="--r:.8"><div class="ex-f" style="background:var(--cloud)">
             <svg class="nf ex-flow" style="left:0" viewBox="0 0 1200 500" aria-hidden="true"><use href="#shard" transform="translate(640 455) rotate(-24) scale(9.5 9.5)" style="--a:#1C63D3;--b:#0F45A3"/><use href="#shard" transform="translate(190 455) rotate(-24) scale(5.6 5.6)" style="--a:#DCEBFF;--b:#DCEBFF"/></svg>
             <div class="ex-c" style="padding:7cqw">
-              <div class="ex-top"><img class="ex-lg" style="width:24cqw" src="Nova%20Ventures%20Logo%20Package/01%20Horizontal/SVG/NovaVentures_Horizontal_FullColour.svg" alt="Nova Ventures"><span class="ex-pg" style="font-size:2.8cqw">1 / 3</span></div>
+              <div class="ex-top"><img class="ex-lg" style="width:24cqw" src="Nova%20Ventures%20Logo%20Package/01%20Horizontal/SVG/NovaVentures_Horizontal_FullColour.svg" alt="Nova Ventures"><span class="ex-pg" style="font-size:2.8cqw"><b>1</b> / 3</span></div>
               <p class="ex-h" style="font-size:10.5cqw;margin-top:12cqw">Starting a business in the UAE: <em>5 steps.</em></p>
               <p class="ex-p" style="font-size:3.4cqw;margin-top:3cqw">Swipe for one step per slide →</p><i class="acc-dash" style="margin-top:5cqw"></i>
             </div></div></figure>
         <figure class="ex" style="--r:.8"><div class="ex-f" style="background:var(--cloud)">
             <svg class="nf ex-flow" style="left:-100%" viewBox="0 0 1200 500" aria-hidden="true"><use href="#shard" transform="translate(640 455) rotate(-24) scale(9.5 9.5)" style="--a:#1C63D3;--b:#0F45A3"/><use href="#shard" transform="translate(190 455) rotate(-24) scale(5.6 5.6)" style="--a:#DCEBFF;--b:#DCEBFF"/></svg>
             <div class="ex-c" style="padding:7cqw">
-              <div class="ex-top"><span class="ex-num" style="font-size:16cqw">02</span><span class="ex-pg" style="font-size:2.8cqw">2 / 3</span></div>
+              <div class="ex-top"><span class="ex-num" style="font-size:16cqw">02</span><span class="ex-pg" style="font-size:2.8cqw"><b>2</b> / 3</span></div>
               <p class="ex-h" style="font-size:8.6cqw;margin-top:4cqw">Choose mainland or <em>free zone.</em></p>
               <p class="ex-p" style="font-size:3.6cqw;margin-top:3cqw">It depends on where your customers are and what you sell. We explain the trade-offs before you decide.</p>
             </div></div></figure>
         <figure class="ex" style="--r:.8"><div class="ex-f" style="background:var(--cloud)">
             <svg class="nf ex-flow" style="left:-200%" viewBox="0 0 1200 500" aria-hidden="true"><use href="#shard" transform="translate(640 455) rotate(-24) scale(9.5 9.5)" style="--a:#1C63D3;--b:#0F45A3"/><use href="#shard" transform="translate(190 455) rotate(-24) scale(5.6 5.6)" style="--a:#DCEBFF;--b:#DCEBFF"/></svg>
             <div class="ex-c" style="padding:7cqw">
-              <div class="ex-top"><span></span><span class="ex-pg" style="font-size:2.8cqw">3 / 3</span></div>
+              <div class="ex-top"><span></span><span class="ex-pg" style="font-size:2.8cqw"><b>3</b> / 3</span></div>
               <p class="ex-h" style="font-size:9cqw;margin-top:6cqw">Not sure which route fits <em>your business?</em></p>
               <span class="ex-btn" style="font-size:3.6cqw;margin-top:5cqw">Speak to an advisor <i>→</i></span>
             </div></div></figure>
       </div>
-      <p class="ex-cap"><b>Carousel · 4:5</b>One shard runs across the slides, so the set reads as one piece when swiped.</p>
+      <p class="ex-cap"><b>Carousel · 4:5</b>One shard runs across the slides, so the set reads as one piece when swiped. The current slide number is pink: where you are.</p>
       <div class="ex-rules">
         <div><p class="eyebrow">What keeps it Nova</p><ul class="needs">
           <li>The supplied logo file, in the version that suits the background, with room around it.</li>
