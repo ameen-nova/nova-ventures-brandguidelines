@@ -4,7 +4,7 @@ Version 1.0 · October 2026
 
 This is the single source of truth for the Nova Ventures brand. It is written to be read by people and by AI tools. Use it to make anything: posters, social posts, carousels, presentations, documents, web pages, motion graphics and video.
 
-`index.html` in this folder is the visual version of the same guide, for people. If the two ever disagree, this file wins, and the HTML should be updated to match.
+`index.html` in this folder is the visual version of the same guide, for people. If the two ever disagree, this file wins, and the HTML should be updated to match. The guide's own interface (its side menu, ✓ and ✕ lists, swatch cards) is not a creative style to copy.
 
 **How to read it:**
 - Sections 1 to 9 describe the identity: who Nova is, how it sounds and how it looks. Treat these as fixed.
@@ -20,7 +20,7 @@ This is the single source of truth for the Nova Ventures brand. It is written to
 
 | | |
 |---|---|
-| Brand idea (internal) | Business beyond borders. |
+| Brand idea (internal only, never printed on creatives) | Business beyond borders. |
 | Value proposition | Your UAE business setup, made simpler. |
 | Trust message | Clear guidance from people who understand the process. |
 | Promise | Clear guidance. Reliable support. Real opportunities. |
@@ -208,7 +208,7 @@ Left-align. Centre only short, single statements. Body text 50 to 75 characters 
 
 A faceted blue-and-silver star with the NOVA VENTURES wordmark. The dimensional (metallic) logo is the only rendered element in the brand; everything else stays flat.
 
-**Always place the supplied file.** Never redraw, retype, recolour, stretch, rearrange, or add shadow, glow, outline or bevel. Never put it in a box. Never add a tagline, divider or text beside it.
+**Always place the supplied file.** Never redraw, retype, recolour, stretch, rearrange, or add shadow, glow, outline or bevel. Never put it in a box. Never add a tagline, divider or text beside it, and never set "Business beyond borders" under it.
 
 **Which version**
 
@@ -257,7 +257,7 @@ Place it rotated −24° in SVG (tip up and to the right, the angle of the star'
 
 **Working rules:** up to four shards per composition (modular backgrounds excepted) · keep two shard widths clear of text, logo and trim · minimum 32 px / 10 mm long · at most one flipped shard per layout. Variety comes from scale, rotation, spacing and crop.
 
-**Never:** 3D, gloss, metal, glass, glow, grain or shadow · a gradient inside a shard · new polygons, arrows or chevrons · shards arranged into a star · dense repeating tiles · a giant copy of the logo star as decoration · a shard as a UI icon, bullet or button. A layout with no graphics is fully on brand.
+**Never:** 3D, gloss, metal, glass, glow, grain, transparency or shadow · a gradient inside a shard · new polygons, arrows or chevrons · shards arranged into a star · dense repeating tiles · a giant copy of the logo star as decoration · a shard as a UI icon, bullet or button. A layout with no graphics is fully on brand.
 
 With photography: a shard may crop, frame or sit beside a photo, as a solid shape, kept clear of faces. Never translucent.
 
@@ -411,6 +411,12 @@ Motion follows the same feel: calm, purposeful and forward. Everything moves alo
 **The principle:** AI generates **photos and footage**. The design (logo, type, shards, layout) is **assembled from the real files**. Image and video generators can't place the logo at an exact size or render Arsenal, so they should never be asked for the finished design.
 
 ### Image generators (ChatGPT, Midjourney, Firefly and similar)
+Upload this file and **one** logo PNG (the version for your background, from `Nova Ventures Logo Package/01 Horizontal/PNG/`). Don't upload the client originals in `svg/` or the root PNGs.
+
+The chat model writes its own short prompt for the image model, and details get lost. Ask it to include this brief word for word:
+
+> Poster for Nova Ventures. Light, airy, editorial layout with lots of white space. Headline in a light, thin-stroked humanist sans-serif, regular weight, never bold, sentence case; one phrase in blue (#1C63D3). Body text in a clean rounded sans-serif, grey (#5B6472). Colours: white and very light grey, navy (#102A50) and Nova Blue (#1C63D3), with at most two tiny hot pink (#FF2D8A) marks: a short thin dash before the label, and the key figure. Logo small, about 10% of the width, in a corner, with nothing written beside or under it. Photo natural and unfiltered, colours true to life, no haze or wash over it. Graphics only flat, solid, slim angled blades in blue, never transparent. Numbers and short text under thin rules instead of icons. One clear call to action. A small source and date line for news.
+
 - Upload this file, and ask for a photo or a background only, with clear space for text.
 - Place the real logo and type afterwards, in a design tool or HTML.
 - If you do ask for a full design for a quick concept, expect the logo and fonts to drift, and replace them before anything is published.
@@ -440,7 +446,7 @@ Footage style block (add the subject and camera move at the start):
 
 ## 14. Before you deliver
 
-- Real logo file, the right version for the background, about 10% of the width, nothing beside it?
+- Real logo file, the right version for the background, about 10% of the width, nothing beside it, no "Business beyond borders"?
 - Arsenal Regular (a sans-serif, not a serif) and Lato only, with one highlighted phrase?
 - Every colour from section 3, mostly light, with pink kept to one or two small marks doing different jobs?
 - Shards flat, on the 24° angle, clear of text, never translucent?

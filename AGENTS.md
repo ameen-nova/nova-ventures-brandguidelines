@@ -13,8 +13,9 @@ If `BRAND.md` and `index.html` disagree, `BRAND.md` wins.
 
 1. **Start from the idea.** Find the one thing the piece has to say and pick a way in (BRAND.md section 10).
 2. **Build from the real files.** Place the logo from `Nova Ventures Logo Package/`, set type in the fonts from `Fonts/`, use colours from BRAND.md section 3, and draw shards from the geometry in section 6 or the files in `06 Shard/`. Never redraw or retype the logo.
-3. **Generate only photos and footage.** If an image or video model is involved, it makes the photograph or the clip. The logo, type, shards and layout are assembled on top.
-4. **Check before delivering.** Run the checklist in BRAND.md section 14, and look at the rendered result, not just the code.
+3. **Uploading to a chat tool?** Upload `BRAND.md` and one logo PNG for your background. Not the whole folder, and not the originals in `svg/` or the root PNGs.
+4. **Generate only photos and footage.** If an image or video model is involved, it makes the photograph or the clip. The logo, type, shards and layout are assembled on top.
+5. **Check before delivering.** Run the checklist in BRAND.md section 14, and look at the rendered result, not just the code.
 
 ## Files
 
