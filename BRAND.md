@@ -424,7 +424,7 @@ Motion follows the same feel: calm, purposeful and forward. Everything moves alo
 **The principle:** AI generates **photos and footage**. The design (logo, type, shards, layout) is **assembled from the real files**. Image and video generators can't place the logo at an exact size or render Arsenal, so they should never be asked for the finished design.
 
 ### Image generators (ChatGPT, Midjourney, Firefly and similar)
-Upload this file and **one** logo PNG (the version for your background, from `Nova Ventures Logo Package/01 Horizontal/PNG/`). Don't upload the client originals in `svg/` or the root PNGs.
+Upload this file and **one** logo PNG (the version for your background, from `Nova Ventures Logo Package/01 Horizontal/PNG/`).
 
 The chat model writes its own short prompt for the image model, and details get lost. Ask it to include this brief word for word:
 
@@ -445,7 +445,7 @@ Footage style block (add the subject and camera move at the start):
 > [Subject and action], [slow push-in / gentle slide / locked-off / slow aerial], real UAE location, natural daylight, neutral true-to-life colour grade, moderate contrast, steady professional cinematography, shallow depth of field, people mid-task and unposed, calm and confident pace, 24 fps, clean frame with space for captions.
 
 ### Coding agents (Claude Code, Codex, Cursor and similar)
-- Read `AGENTS.md`, then this file.
+- Read this file in full.
 - Build posters, decks, pages and motion in HTML, CSS and SVG, linking the real logo files and fonts. Draw shards from the geometry in section 6.
 - Export stills with headless Chrome. Animate with CSS, GSAP or a video framework; follow section 11.
 - Check the render against section 14 before delivering.
@@ -483,5 +483,4 @@ Footage style block (add the subject and camera move at the start):
 | Shards | `Nova Ventures Logo Package/06 Shard/` |
 | Fonts | `Fonts/` |
 | Reference photos | `images/` |
-| Client's original logo files | `svg/` and the PNGs in the root. Some names are wrong ("Logo with Wordmark White vertical" is black); prefer the Logo Package |
 | Visual guide for people | `index.html` |

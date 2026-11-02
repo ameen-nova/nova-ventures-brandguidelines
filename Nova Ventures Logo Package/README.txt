@@ -9,7 +9,7 @@ WHICH FILE TO USE
 - MonoBlack: single-colour print, neutral grey backgrounds
 - Symbol: favicons, app icons, avatars. Below 48 px use the Flat versions in single-colour contexts.
 
-SOURCE FILE MAPPING (original name -> package name)
+SOURCE FILE MAPPING (client's original name -> package name; the originals are kept in git history)
 - Logo with Wordmark Primary horizontal font black.svg  ->  01 Horizontal/NovaVentures_Horizontal_FullColour
 - Logo with Wordmark Primary horizontal.svg  ->  01 Horizontal/NovaVentures_Horizontal_Reversed
 - Logo with Wordmark Black horizontal.svg  ->  01 Horizontal/NovaVentures_Horizontal_MonoBlack
@@ -34,10 +34,10 @@ NOTES
 - NovaVentures_Symbol_FlatBlue (SVG + PNG) is PROPOSED as the everyday colour symbol: the client's flat star, nothing redrawn, filled Nova Blue. Confirm with the client before release; the PDF will be added once approved.
 - PDF colour is RGB. Ask the printer to convert with their CMYK profile and proof Pantone matches.
 
-06 SHARD (PROPOSED, v0.1)
+06 SHARD
 - The Shard System base shard: a long faceted blade (length 100 : width 18) laid on the 24° angle of the star’s sweep. Four anchor points: two tips, two shoulders.
 - NovaVentures_Shard_Master_TwoTone (Nova Blue + Deep Blue facet) is the default; _Navy (Navy + Midnight) and _White (White + Pale Blue) for other backgrounds; _NovaBlue and _PaleTint are flat single-tone versions.
-- Build every composition from these files. Confirm the geometry with the client before release.
+- Build every composition from these files. Rules, including the one glass shard, are in BRAND.md section 6.
 
 07 FLAT LOCKUPS (PROPOSED)
 - Horizontal and vertical lockups with the flat star: Flat_FullColour (Nova Blue star, #171717 wordmark), Flat_Reversed (Nova Blue star, white wordmark), Flat_MonoBlack (#171717), Flat_MonoWhite.
