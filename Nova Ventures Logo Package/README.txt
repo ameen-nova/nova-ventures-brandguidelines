@@ -28,7 +28,6 @@ SOURCE FILE MAPPING (client's original name -> package name; the originals are k
 
 NOTES
 - 'Logo with Wordmark White vertical.svg' contained the BLACK logo; it is now NovaVentures_Vertical_MonoBlack.
-- NovaVentures_Vertical_FullColour is new: the supplied vertical logo with the wordmark in the same #171717 used by the horizontal full-colour file. Confirm with the client before release.
 - 05 Digital: favicon.ico (16/32/48), icons, Apple touch icon and 800 px social avatars, all from the full-colour symbol.
 - PDF colour is RGB. Ask the printer to convert with their CMYK profile and proof Pantone matches.
 
