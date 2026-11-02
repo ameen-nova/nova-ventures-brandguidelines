@@ -206,7 +206,7 @@ Left-align. Centre only short, single statements. Body text 50 to 75 characters 
 
 ## 5. Logo
 
-A faceted blue-and-silver star with the NOVA VENTURES wordmark. The dimensional (metallic) logo is the only rendered element in the brand; everything else stays flat, apart from the one glass panel over a photograph (section 7).
+A faceted blue-and-silver star with the NOVA VENTURES wordmark. The dimensional (metallic) logo is the only rendered element in the brand; everything else stays flat, apart from one glass element: a glass panel over a photograph (section 7) or a glass shard on a background that isn't white (section 6).
 
 **Always place the supplied file.** Never redraw, retype, recolour, stretch, rearrange, or add shadow, glow, outline or bevel. Never put it in a box. Never add a tagline, divider or text beside it, and never set "Business beyond borders" under it.
 
@@ -245,7 +245,7 @@ upper facet   M-50 0 L-3.2 -9.6 L50 0 Z             (lighter tone)
 ```
 Place it rotated −24° in SVG (tip up and to the right, the angle of the star's sweep). Master files: `Nova Ventures Logo Package/06 Shard/`.
 
-**Colour pairs** (upper / lower facet), always flat:
+**Colour pairs** (upper / lower facet), flat unless the shard is the one glass shard (below):
 - Nova Blue `#1C63D3` / Deep Blue `#0F45A3`: the default
 - Navy `#102A50` / Midnight `#0B1B35`
 - Light Blue `#7FB3FF` / Nova Blue `#1C63D3`: on dark
@@ -257,9 +257,15 @@ Place it rotated −24° in SVG (tip up and to the right, the angle of the star'
 
 **Working rules:** up to four shards per composition (modular backgrounds excepted) · keep two shard widths clear of text, logo and trim · minimum 32 px / 10 mm long · at most one flipped shard per layout. Variety comes from scale, rotation, spacing and crop.
 
-**Never:** 3D, gloss, metal, glass, glow, grain, transparency or shadow · a gradient inside a shard · new polygons, arrows or chevrons · shards arranged into a star · dense repeating tiles · a giant copy of the logo star as decoration · a shard as a UI icon, bullet or button. A layout with no graphics is fully on brand.
+**Glass shard: about 1 in 10.** Glass is the exception, never the system. Across a series or campaign, roughly one shard in ten is glass; in any one layout, at most one, and every other shard stays flat.
+- *Where:* only on a background that isn't white: a photograph, Navy, Midnight or the dark gradient. Never on White, and treat Cloud and Light Grey as white: on near-white surfaces glass has nothing to show through and turns into a washed-out tint, so use a flat shard there. On a flat dark surface, let it overlap a flat shard so the glass has something to show.
+- *Which:* a supporting shard, never the largest. Blue only: the pink shard always stays flat.
+- *Recipe:* the same base shard and facet line · upper facet Light Blue `#7FB3FF` at 34%, lower facet Nova Blue `#1C63D3` at 46% · background blur 10 px, saturation 170%, brightness 108% · 1.5 px white outline and facet line at 70%. No drop shadow, glow or gradient.
+- *Placement:* clear of faces and text. One glass element per layout: a glass shard or a glass panel (section 7), never both.
 
-With photography: a shard may crop, frame or sit beside a photo, as a solid shape, kept clear of faces. Never translucent.
+**Never:** 3D, gloss, metal, glow, grain or shadow · glass or transparency outside the one glass shard above · a gradient inside a shard · new polygons, arrows or chevrons · shards arranged into a star · dense repeating tiles · a giant copy of the logo star as decoration · a shard as a UI icon, bullet or button. A layout with no graphics is fully on brand.
+
+With photography: a shard may crop, frame or sit beside a photo, kept clear of faces. Solid by default; one supporting shard may be glass (above).
 
 ---
 
@@ -275,11 +281,11 @@ With photography: a shard may crop, frame or sit beside a photo, as a solid shap
 - **Buttons:** one primary per view. Primary: Midnight fill, white Lato Bold, sentence case, 6 px corners, no shadow, optional trailing arrow; Nova Blue on hover, Deep Blue when pressed. On dark: white fill with Deep Blue text. Secondary: 1 px Midnight outline. Text link: Nova Blue.
 - **Glass panel:** a clear, frosted panel that holds text over a photograph.
   - *Where:* over photography only (posts, banners, stories, a web hero or menu bar over a photo). Never on a flat surface, a gradient or a shard.
-  - *How many:* one per layout.
+  - *How many:* one per layout, and not alongside a glass shard (one glass element per layout).
   - *Recipe:* white at 24% opacity · background blur 12 px, saturation 170%, brightness 112% · 1.5 px white rim at 60% · a thin white highlight along the top edge and a soft inner glow · corners about 4% of the width. No drop shadow, no colour tint, no second gradient.
   - *Inside:* Midnight text (labels too), one phrase in Nova Blue, the pink dash, a Midnight-text call to action. The FullColour logo may sign off inside it.
   - *Placement:* keep it clear of faces, inside the 6% margin. Check that the text reads over what shows through. If the area behind is busy or dark, move the panel, raise the white to about 40%, or use a navy band instead.
-  - Shards never go behind, on or inside the glass, and stay flat everywhere.
+  - Shards never go behind, on or inside the panel.
 - **Icons:** Nova has no icon set yet. Use type, numbers and rules instead of stock line icons.
 
 ---
@@ -456,8 +462,8 @@ Footage style block (add the subject and camera move at the start):
 - Real logo file, the right version for the background, about 10% of the width, nothing beside it, no "Business beyond borders"?
 - Arsenal Regular (a sans-serif, not a serif) and Lato only, with one highlighted phrase?
 - Every colour from section 3, mostly light, with pink kept to one or two small marks doing different jobs?
-- Shards flat, on the 24° angle, clear of text, never translucent?
-- At most one glass panel, over a photo only, clear of faces, with text that reads at a glance?
+- Shards flat, on the 24° angle, clear of text?
+- At most one glass element: a panel over a photo, or a supporting blue shard on a background that isn't white? Clear of faces, with text that reads at a glance?
 - One clear action, no checkmark bubbles, no boxes, no shadows, no 3D?
 - Photos real, honest and unfiltered, with places shown as they are?
 - Every word proofread, and every figure, date and source checked? Placeholders still marked?

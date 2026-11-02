@@ -552,6 +552,16 @@ main { min-width: 0; }
 .shard-tile { border-radius: 6px; overflow: hidden; aspect-ratio: 4 / 3; border: 1px solid var(--line); }
 .shard-tile.wide { aspect-ratio: 2 / 1; }
 .shard-tile svg { display: block; width: 100%; height: 100%; }
+/* glass shard: the base shard in a 4:3 tile, placed in the tile's 400 × 300 units (1 unit = .25cqw) */
+.gshard-tile { position: relative; container-type: inline-size; }
+.gshard-tile > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
+.gshard-tile > svg { position: absolute; inset: 0; }
+.gshard { position: absolute; width: calc(var(--l) * .25cqw); height: calc(var(--l) * .04525cqw); left: calc((var(--cx) - var(--l) / 2) * .25cqw); top: calc(var(--cy) * .25cqw - var(--l) * .02398cqw); transform: rotate(-24deg); transform-origin: 50% 53%; }
+.gshard i { position: absolute; inset: 0; -webkit-backdrop-filter: blur(5px) saturate(170%) brightness(1.08); backdrop-filter: blur(5px) saturate(170%) brightness(1.08); }
+.gshard .up { clip-path: url(#gsh-up); background: rgba(127,179,255,.34); }
+.gshard .lo { clip-path: url(#gsh-lo); background: rgba(28,99,211,.46); }
+.gshard svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.gshard path { fill: none; stroke: rgba(255,255,255,.7); stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
 .shard-construct { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 28px; align-items: start; }
 .shard-use { font-size: 13px; color: var(--nova-blue); font-weight: 700; margin-top: 6px; }
 .shard-hero { position: relative; isolation: isolate; overflow: hidden; border-radius: 6px; background: var(--midnight); padding: 64px clamp(24px, 5vw, 64px); min-height: 340px; display: grid; align-content: end; }
@@ -1340,7 +1350,7 @@ svg.nf { display: block; }
     <div class="ch-head">
       <div class="ch-num" aria-hidden="true">05</div>
       <h2>Depth &amp; surfaces</h2>
-      <p>Depth comes from composition, not rendering: overlap, scale, white space, tone and real photography. Surfaces are flat by default. The dimensional logo is the only rendered element in the system; everything around it stays flat, so the logo keeps its presence. The one exception is a single glass panel over a photograph.</p>
+      <p>Depth comes from composition, not rendering: overlap, scale, white space, tone and real photography. Surfaces are flat by default. The dimensional logo is the only rendered element in the system; everything around it stays flat, so the logo keeps its presence. The one exception is a single glass element: a panel over a photograph, or one glass shard.</p>
     </div>
 
     <div class="block">
@@ -1408,7 +1418,7 @@ svg.nf { display: block; }
     </div>
 
     <div class="block" id="glass">
-      <div class="block-head"><p class="eyebrow">Glass panel</p><h3>One clear panel, over photography only</h3><p>When text has to sit on a photograph, it can sit on one frosted glass panel. The photo shows through, so the panel feels part of the image rather than a box on top of it. It is the only see-through element in the brand: everything else stays flat.</p></div>
+      <div class="block-head"><p class="eyebrow">Glass panel</p><h3>One clear panel, over photography only</h3><p>When text has to sit on a photograph, it can sit on one frosted glass panel. The photo shows through, so the panel feels part of the image rather than a box on top of it. With the occasional glass shard, it is the only see-through element in the brand: everything else stays flat.</p></div>
       <div class="grid g2" style="gap:28px;align-items:start">
         <div>
           <div class="glass-demo">
@@ -1426,7 +1436,7 @@ svg.nf { display: block; }
           <thead><tr><th>Property</th><th>Rule</th></tr></thead>
           <tbody>
             <tr><td>Where</td><td>Over photography only: posts, banners, stories, a web hero or menu bar over a photo. Never on a flat surface, a gradient or a shard</td></tr>
-            <tr><td>How many</td><td>One per layout</td></tr>
+            <tr><td>How many</td><td>One per layout, and never alongside a <a href="#glass-shard">glass shard</a></td></tr>
             <tr><td>Glass</td><td>White at 24%, background blur 12 px with a little extra saturation and brightness. No colour tint</td></tr>
             <tr><td>Edge</td><td>1.5 px white rim, a thin highlight along the top and a soft inner glow. No drop shadow</td></tr>
             <tr><td>Corners</td><td>About 4% of the canvas width (40 px on a 1080 px post)</td></tr>
@@ -1457,7 +1467,7 @@ svg.nf { display: block; }
             <div><div class="gs-tile"><svg class="nf" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100%" height="100%" fill="#F3F5F8"/><defs><linearGradient id="bad-g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#C0C2C8"/><stop offset=".5" stop-color="#7FB3FF"/><stop offset="1" stop-color="#0F45A3"/></linearGradient><filter id="bad-f" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="10" dy="14" stdDeviation="10" flood-color="#0B1B35" flood-opacity=".55"/><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#2A93ED" flood-opacity=".9"/></filter></defs><g transform="translate(200 150) rotate(-24) scale(3)" filter="url(#bad-f)"><path d="M-50 0L-3.2 -9.6L50 0L-1.6 8.5Z" fill="url(#bad-g)"/><path d="M-50 0L-3.2 -9.6L50 0" fill="none" stroke="#fff" stroke-width=".5"/></g></svg></div><span>Add gradients, glows, highlights or shadows to a shard.</span></div>
           </div>
           <ul>
-            <li><span class="badge no">✕</span>Add bevels, metallic shine or glow to anything but the logo artwork, or glass to anything but one panel over a photo.</li>
+            <li><span class="badge no">✕</span>Add bevels, metallic shine or glow to anything but the logo artwork, or glass to anything but one panel over a photo or one supporting shard.</li>
             <li><span class="badge no">✕</span>Stack gradients, or use more than one in a layout.</li>
           </ul>
         </div>
@@ -1538,6 +1548,28 @@ svg.nf { display: block; }
       </div>
     </div>
 
+    <div class="block" id="glass-shard">
+      <div class="block-head"><p class="eyebrow">Glass shard</p><h3>About one shard in ten can be glass</h3><p>Glass is the exception, never the system. Across a series, roughly one shard in ten is glass; in any one layout, at most one, and it is never the largest. It only works where there is something to see through: on a photograph or a dark surface. On white and near-white surfaces it washes out, so the shard stays flat.</p></div>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><clipPath id="gsh-up" clipPathUnits="objectBoundingBox"><path d="M0 .53L.468 0L1 .53Z"/></clipPath><clipPath id="gsh-lo" clipPathUnits="objectBoundingBox"><path d="M0 .53L1 .53L.484 1Z"/></clipPath></defs></svg>
+      <div class="grid g3">
+        <div><div class="shard-tile gshard-tile"><img src="images/photo-people.jpg" alt="" loading="lazy"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#shard" transform="translate(390 272) rotate(-24) scale(2.6 2.6)" style="--a:#1C63D3;--b:#0F45A3"/></svg><div class="gshard" style="--cx:345;--cy:74;--l:130" aria-hidden="true"><i class="up"></i><i class="lo"></i><svg viewBox="0 0 1 1" preserveAspectRatio="none"><path d="M0 .53L.468 0L1 .53L.484 1Z M0 .53L1 .53" /></svg></div></div><div class="cap"><b>✓ On a photograph</b><span>The skyline shows through. Clear of the face; the large shard stays flat.</span></div></div>
+        <div><div class="shard-tile gshard-tile"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100%" height="100%" fill="#0B1B35"/><use href="#shard" transform="translate(300 200) rotate(-24) scale(3 3)" style="--a:#1C63D3;--b:#0F45A3"/><use href="#shard" transform="translate(110 95) rotate(-24) scale(1 1)" style="--a:#FF2D8A;--b:#D61F72"/></svg><div class="gshard" style="--cx:235;--cy:160;--l:170" aria-hidden="true"><i class="up"></i><i class="lo"></i><svg viewBox="0 0 1 1" preserveAspectRatio="none"><path d="M0 .53L.468 0L1 .53L.484 1Z M0 .53L1 .53" /></svg></div></div><div class="cap"><b>✓ On Midnight or Navy</b><span>Overlapping a flat shard, so the glass has something to show. Pink stays flat.</span></div></div>
+        <div><div class="shard-tile gshard-tile"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100%" height="100%" fill="#FFFFFF"/><use href="#shard" transform="translate(330 225) rotate(-24) scale(1.6 1.6)" style="--a:#1C63D3;--b:#0F45A3"/></svg><div class="gshard" style="--cx:205;--cy:135;--l:210" aria-hidden="true"><i class="up"></i><i class="lo"></i><svg viewBox="0 0 1 1" preserveAspectRatio="none"><path d="M0 .53L.468 0L1 .53L.484 1Z M0 .53L1 .53" /></svg></div></div><div class="cap"><b>✕ On White, Cloud or Light Grey</b><span>Nothing to see through: the glass turns into a washed-out tint. Use a flat shard.</span></div></div>
+      </div>
+      <div class="tablebox" style="margin-top:28px"><table class="datatable">
+        <thead><tr><th>Property</th><th>Rule</th></tr></thead>
+        <tbody>
+          <tr><td>How often</td><td>About 1 shard in 10 across a series; at most one per layout. Every other shard stays flat</td></tr>
+          <tr><td>Where</td><td>On a background that isn’t white: a photograph, Navy, Midnight or the dark gradient. On a flat dark surface, let it overlap a flat shard</td></tr>
+          <tr><td>Never on</td><td>White, Cloud or Light Grey</td></tr>
+          <tr><td>Which shard</td><td>A supporting shard, never the largest. Blue only: the pink shard stays flat</td></tr>
+          <tr><td>Recipe</td><td>Upper facet Light Blue #7FB3FF at 34%, lower facet Nova Blue #1C63D3 at 46% · background blur 10 px, saturation 170%, brightness 108% · 1.5 px white outline and facet line at 70%. No shadow, glow or gradient</td></tr>
+          <tr><td>With other glass</td><td>One glass element per layout: a glass shard or a <a href="#glass">glass panel</a>, never both</td></tr>
+          <tr><td>Placement</td><td>Clear of faces and text, same clear space as any shard</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
     <div class="block">
       <div class="block-head"><p class="eyebrow">How it behaves</p><h3>Four compositions, each with a job</h3><p>Fewer shapes, stronger rules. Every composition uses the same base shard; variety comes only from scale, rotation, spacing, cropping and arrangement. Never from new shapes, gradient bands or dense repeating tiles.</p></div>
       <div class="grid g4">
@@ -1575,7 +1607,7 @@ svg.nf { display: block; }
           <ul class="needs" style="gap:6px">
             <li>The shard may crop, frame or sit beside a photograph.</li>
             <li>Keep it clear of faces and key information in the image.</li>
-            <li>Use solid shapes, never translucent or metallic overlays.</li>
+            <li>Keep shards solid; one supporting shard may be <a href="#glass-shard">glass</a>. Never metallic.</li>
             <li>Let the photograph keep its natural colour and depth.</li>
           </ul>
         </div>
@@ -1596,13 +1628,13 @@ svg.nf { display: block; }
         <div class="card"><h4><span class="badge ok">✓</span>Do</h4><ul>
           <li><span class="badge ok">✓</span>Build every shard from the base shard.</li>
           <li><span class="badge ok">✓</span>Keep the slim, asymmetrical silhouette and fixed proportions.</li>
-          <li><span class="badge ok">✓</span>Use flat palette tones, split on the facet line.</li>
+          <li><span class="badge ok">✓</span>Use flat palette tones, split on the facet line. Glass for about one shard in ten, never on white.</li>
           <li><span class="badge ok">✓</span>Crop with intention and leave generous negative space.</li>
           <li><span class="badge ok">✓</span>Use it selectively, to support the content.</li>
         </ul></div>
         <div class="card"><h4><span class="badge no">✕</span>Don’t</h4><ul>
           <li><span class="badge no">✕</span>Invent new polygons or turn the shard into an arrow or chevron.</li>
-          <li><span class="badge no">✕</span>Add gradients, metallic, glass, glow, grain or shadow.</li>
+          <li><span class="badge no">✕</span>Add gradients, metallic, glow, grain or shadow, or glass beyond one supporting shard.</li>
           <li><span class="badge no">✕</span>Stretch, distort or crop it beyond recognition.</li>
           <li><span class="badge no">✕</span>Arrange shards into a star, scatter them randomly, or pack them into dense tiles that read as a sports or tech brand.</li>
           <li><span class="badge no">✕</span>Put it in every card and section, or use it in place of the logo.</li>
@@ -1619,6 +1651,7 @@ svg.nf { display: block; }
             <tr><td>Base shard geometry</td><td>As shown above, on the 24° sweep angle</td></tr>
             <tr><td>Flipped variation</td><td>Allowed for balance, at most one per layout</td></tr>
             <tr><td>Shards per composition</td><td>Up to four, except modular backgrounds</td></tr>
+            <tr><td>Glass shards</td><td>About 1 in 10; at most one per layout, on a background that isn’t white</td></tr>
             <tr><td>Minimum size</td><td>Screen 32 px long · Print 10 mm long</td></tr>
             <tr><td>Clear space</td><td>Twice the shard’s width from text, logo and trim when used alone</td></tr>
             <tr><td>Repeating tile</td><td>None, unless a specific production use needs one</td></tr>
@@ -2026,7 +2059,7 @@ svg.nf { display: block; }
         </ul></div>
         <div class="card"><h4><span class="badge no">✕</span>Don’t</h4><ul>
           <li><span class="badge no">✕</span>Generate, redraw or retype the logo or the star.</li>
-          <li><span class="badge no">✕</span>Use 3D, glossy or extruded stars, lens flares, light rays or blue haze, or glass anywhere but one panel over a photo.</li>
+          <li><span class="badge no">✕</span>Use 3D, glossy or extruded stars, lens flares, light rays or blue haze, or glass beyond one panel over a photo or one supporting shard.</li>
           <li><span class="badge no">✕</span>Substitute other fonts (Arsenal is a sans-serif, never a serif), or use Arsenal Bold.</li>
           <li><span class="badge no">✕</span>Add checkmarks in circles, icon bubbles, emoji or boxed text cards.</li>
           <li><span class="badge no">✕</span>Use all-caps or pill-shaped buttons, gradients or drop shadows.</li>
