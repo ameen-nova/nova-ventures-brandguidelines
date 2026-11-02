@@ -206,7 +206,7 @@ Left-align. Centre only short, single statements. Body text 50 to 75 characters 
 
 ## 5. Logo
 
-A faceted blue-and-silver star with the NOVA VENTURES wordmark. The dimensional (metallic) logo is the only rendered element in the brand; everything else stays flat.
+A faceted blue-and-silver star with the NOVA VENTURES wordmark. The dimensional (metallic) logo is the only rendered element in the brand; everything else stays flat, apart from the one glass panel over a photograph (section 7).
 
 **Always place the supplied file.** Never redraw, retype, recolour, stretch, rearrange, or add shadow, glow, outline or bevel. Never put it in a box. Never add a tagline, divider or text beside it, and never set "Business beyond borders" under it.
 
@@ -268,11 +268,18 @@ With photography: a shard may crop, frame or sit beside a photo, as a solid shap
 - **Surfaces are flat:** White, Light Grey, Cloud, Navy, Midnight. Separate sections by changing surface, not with shadows or boxes. Avoid Light Grey on Cloud, or two dark sections in a row.
 - **Gradients are optional and quiet:** at most one per layout, on a large background only. 45° Cloud → Pale Blue, or 45° Midnight → Navy.
 - **Shadows are for interfaces only** (menus, dialogs), tinted with Midnight. Never on graphics, photos, the logo or buttons.
-- **Text sits on the background.** No boxed text cards, no glass panels.
+- **Text sits on the background.** No boxed text cards. The one exception is the glass panel, over photography only (below).
 - **Lines:** a 2 px Nova Blue rule above a heading or key block for emphasis; 1 px Mid Grey dividers.
 - **Lists:** short items under rules, or numbered 01 02 03 in Lato Bold. No checkmarks in circles, icon bubbles or emoji.
-- **Corners:** 6 px for buttons, panels and image frames · 4 px for chips · square for full-bleed photos. Never pill shapes.
+- **Corners:** 6 px for buttons, panels and image frames · 4 px for chips · square for full-bleed photos · about 4% of the canvas width for the glass panel (40 px on a 1080 px post). Never pill shapes.
 - **Buttons:** one primary per view. Primary: Midnight fill, white Lato Bold, sentence case, 6 px corners, no shadow, optional trailing arrow; Nova Blue on hover, Deep Blue when pressed. On dark: white fill with Deep Blue text. Secondary: 1 px Midnight outline. Text link: Nova Blue.
+- **Glass panel:** a clear, frosted panel that holds text over a photograph.
+  - *Where:* over photography only (posts, banners, stories, a web hero or menu bar over a photo). Never on a flat surface, a gradient or a shard.
+  - *How many:* one per layout.
+  - *Recipe:* white at 24% opacity · background blur 12 px, saturation 170%, brightness 112% · 1.5 px white rim at 60% · a thin white highlight along the top edge and a soft inner glow · corners about 4% of the width. No drop shadow, no colour tint, no second gradient.
+  - *Inside:* Midnight text (labels too), one phrase in Nova Blue, the pink dash, a Midnight-text call to action. The FullColour logo may sign off inside it.
+  - *Placement:* keep it clear of faces, inside the 6% margin. Check that the text reads over what shows through. If the area behind is busy or dark, move the panel, raise the white to about 40%, or use a navy band instead.
+  - Shards never go behind, on or inside the glass, and stay flat everywhere.
 - **Icons:** Nova has no icon set yet. Use type, numbers and rules instead of stock line icons.
 
 ---
@@ -287,7 +294,7 @@ Authentic, professional and aspirational images of real people, places and possi
 - **Composition:** editorial and intentional, with room for text.
 - **Keep it real:** places appear as they are. Never move landmarks next to each other (for example the Burj Khalifa beside a container port).
 - **Avoid:** low resolution, over-saturation, heavy blue tints or overlays, staged stock handshakes, rendered or AI-looking skylines, offices and people.
-- **Text on photos:** use a calm area of the image, or darken only the area behind the text with navy.
+- **Text on photos:** use a calm area of the image, set it on one glass panel (section 7), or darken only the area behind the text with navy.
 
 The photos in `images/` are generated art-direction references. Replace them with commissioned or licensed photography before public use.
 
@@ -450,6 +457,7 @@ Footage style block (add the subject and camera move at the start):
 - Arsenal Regular (a sans-serif, not a serif) and Lato only, with one highlighted phrase?
 - Every colour from section 3, mostly light, with pink kept to one or two small marks doing different jobs?
 - Shards flat, on the 24° angle, clear of text, never translucent?
+- At most one glass panel, over a photo only, clear of faces, with text that reads at a glance?
 - One clear action, no checkmark bubbles, no boxes, no shadows, no 3D?
 - Photos real, honest and unfiltered, with places shown as they are?
 - Every word proofread, and every figure, date and source checked? Placeholders still marked?

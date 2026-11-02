@@ -327,6 +327,19 @@ main { min-width: 0; }
 #gradient .gx.shade { background: linear-gradient(45deg, rgba(192,194,200,.7) 0%, #F3F5F8 50%, #FFFFFF 100%); }
 #gradient .gx.stripes { background: linear-gradient(45deg, #0F45A3 0 26%, #2A93ED 26% 40%, #1C63D3 40% 58%, #7FB3FF 58% 68%, #1C63D3 68% 84%, #0F45A3 84%); }
 .recipe { font: 12.5px/1.55 ui-monospace, Menlo, Consolas, monospace; color: var(--deep-blue); margin-top: 8px; overflow-wrap: anywhere; }
+/* glass panel demo: a 4:5 post scaled with container units */
+.glass-demo { position: relative; aspect-ratio: 4 / 5; container-type: inline-size; overflow: hidden; border-radius: 6px; background: var(--navy); }
+.glass-demo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 57% 50%; }
+.glass { position: absolute; left: 6cqw; right: 6cqw; bottom: 6cqw; padding: 5.6cqw 5.9cqw 5.2cqw; border-radius: 3.7cqw; background: rgba(255,255,255,.24); -webkit-backdrop-filter: blur(7px) saturate(170%) brightness(1.12); backdrop-filter: blur(7px) saturate(170%) brightness(1.12); border: 1.5px solid rgba(255,255,255,.6); box-shadow: inset 0 2px 1px rgba(255,255,255,.9), inset 0 -2px 2px rgba(255,255,255,.35), inset 0 0 24px rgba(255,255,255,.28); color: var(--midnight); }
+.glass::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(150deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.08) 22%, rgba(255,255,255,0) 50%, rgba(255,255,255,.06) 80%, rgba(255,255,255,.3) 100%); }
+.glass::after { content: ""; position: absolute; inset: 2px; border-radius: inherit; pointer-events: none; border-top: 1.5px solid rgba(255,255,255,.85); -webkit-mask: linear-gradient(90deg, #000, rgba(0,0,0,.2) 55%, #000); mask: linear-gradient(90deg, #000, rgba(0,0,0,.2) 55%, #000); }
+.glass .g-dash { width: 4cqw; height: max(2px, .28cqw); background: var(--hot-pink, #FF2D8A); margin-bottom: 2.4cqw; }
+.glass .g-label { font: 700 max(9px, 1.4cqw)/1 var(--font-body); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 2cqw; }
+.glass .g-h { font: 400 7cqw/1.06 var(--font-display); letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.glass .g-h em { font-style: normal; color: var(--nova-blue); }
+.glass .g-foot { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 4cqw; }
+.glass .g-cta { font: 700 max(11px, 2.2cqw)/1 var(--font-body); }
+.glass .g-foot img { width: 15.7cqw; display: block; }
 .facet-shadows .gs-tile { aspect-ratio: 16 / 10; }
 .facet-shadows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .ui-shadows { margin-top: 32px; }
@@ -714,7 +727,7 @@ svg.nf { display: block; }
       <li><a href="#logo"><span>02</span>Logo system<small>Versions, clear space, sizes and misuse</small></a></li>
       <li><a href="#colour"><span>03</span>Colour<small>Palette, ratios and contrast</small></a></li>
       <li><a href="#type"><span>04</span>Typography<small>Arsenal and Lato, scale and hierarchy</small></a></li>
-      <li><a href="#gradient"><span>05</span>Depth &amp; surfaces<small>Flat surfaces, gradients and shadows</small></a></li>
+      <li><a href="#gradient"><span>05</span>Depth &amp; surfaces<small>Flat surfaces, gradients, shadows and glass</small></a></li>
       <li><a href="#graphics"><span>06</span>Brand graphics<small>The Shard System and how to use it</small></a></li>
       <li><a href="#creative"><span>07</span>Creative direction<small>Ideas, examples and what keeps it Nova; social</small></a></li>
       <li><a href="#photo"><span>08</span>Photography<small>Subjects, light, people and places</small></a></li>
@@ -1327,7 +1340,7 @@ svg.nf { display: block; }
     <div class="ch-head">
       <div class="ch-num" aria-hidden="true">05</div>
       <h2>Depth &amp; surfaces</h2>
-      <p>Depth comes from composition, not rendering: overlap, scale, white space, tone and real photography. Surfaces are flat by default. The dimensional logo is the only rendered element in the system; everything around it stays flat, so the logo keeps its presence.</p>
+      <p>Depth comes from composition, not rendering: overlap, scale, white space, tone and real photography. Surfaces are flat by default. The dimensional logo is the only rendered element in the system; everything around it stays flat, so the logo keeps its presence. The one exception is a single glass panel over a photograph.</p>
     </div>
 
     <div class="block">
@@ -1367,11 +1380,12 @@ svg.nf { display: block; }
         <thead><tr><th>Element</th><th>Rule</th></tr></thead>
         <tbody>
           <tr><td>Buttons, inputs, panels, image frames</td><td>6 px corner radius</td></tr>
+          <tr><td>Glass panel</td><td>About 4% of the canvas width (40 px on a 1080 px post)</td></tr>
           <tr><td>Tags and chips</td><td>4 px corner radius</td></tr>
           <tr><td>Full-bleed photos and page sections</td><td>Square corners</td></tr>
           <tr><td>Dividers</td><td>1 px Mid Grey #D9DDE3, only where a surface change can’t do the job</td></tr>
           <tr><td>Emphasis</td><td>2 px Nova Blue rule above a heading or key block</td></tr>
-          <tr><td>Never</td><td>Pill-shaped buttons, mixed radii in one layout, or outlines around photos</td></tr>
+          <tr><td>Never</td><td>Pill-shaped buttons, mixed radii in one layout (the glass panel aside), or outlines around photos</td></tr>
         </tbody>
       </table></div>
     </div>
@@ -1393,6 +1407,38 @@ svg.nf { display: block; }
       </div>
     </div>
 
+    <div class="block" id="glass">
+      <div class="block-head"><p class="eyebrow">Glass panel</p><h3>One clear panel, over photography only</h3><p>When text has to sit on a photograph, it can sit on one frosted glass panel. The photo shows through, so the panel feels part of the image rather than a box on top of it. It is the only see-through element in the brand: everything else stays flat.</p></div>
+      <div class="grid g2" style="gap:28px;align-items:start">
+        <div>
+          <div class="glass-demo">
+            <img src="images/photo-people.jpg" alt="Advisor listening to a client in a Dubai office" loading="lazy">
+            <div class="glass">
+              <div class="g-dash"></div>
+              <p class="g-label">Business setup · UAE</p>
+              <p class="g-h">Mainland or free zone? <em>We’ll help you choose.</em></p>
+              <div class="g-foot"><span class="g-cta">Speak to an advisor →</span><img src="Nova%20Ventures%20Logo%20Package/01%20Horizontal/SVG/NovaVentures_Horizontal_FullColour.svg" alt="Nova Ventures"></div>
+            </div>
+          </div>
+          <p class="recipe">rgba(255,255,255,.24) · backdrop blur 12px, saturate 170%, brightness 112% · 1.5px rim rgba(255,255,255,.6) · top highlight + soft inner glow · radius ≈ 4% of width · no drop shadow</p>
+        </div>
+        <div class="tablebox"><table class="datatable">
+          <thead><tr><th>Property</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td>Where</td><td>Over photography only: posts, banners, stories, a web hero or menu bar over a photo. Never on a flat surface, a gradient or a shard</td></tr>
+            <tr><td>How many</td><td>One per layout</td></tr>
+            <tr><td>Glass</td><td>White at 24%, background blur 12 px with a little extra saturation and brightness. No colour tint</td></tr>
+            <tr><td>Edge</td><td>1.5 px white rim, a thin highlight along the top and a soft inner glow. No drop shadow</td></tr>
+            <tr><td>Corners</td><td>About 4% of the canvas width (40 px on a 1080 px post)</td></tr>
+            <tr><td>Inside</td><td>Midnight text, labels too; one phrase in Nova Blue; the pink dash; the FullColour logo may sign off</td></tr>
+            <tr><td>Placement</td><td>Clear of faces, inside the 6% margin</td></tr>
+            <tr><td>If it doesn’t read</td><td>Move the panel to a calmer area, raise the white to about 40%, or use a navy band instead</td></tr>
+            <tr><td>Never</td><td>Shards behind, on or inside the glass; glass on the logo, buttons or graphics; more than one panel</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
     <div class="block">
       <div class="dodont">
         <div class="card"><h4><span class="badge ok">✓</span>Do</h4>
@@ -1411,7 +1457,7 @@ svg.nf { display: block; }
             <div><div class="gs-tile"><svg class="nf" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="100%" height="100%" fill="#F3F5F8"/><defs><linearGradient id="bad-g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#C0C2C8"/><stop offset=".5" stop-color="#7FB3FF"/><stop offset="1" stop-color="#0F45A3"/></linearGradient><filter id="bad-f" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="10" dy="14" stdDeviation="10" flood-color="#0B1B35" flood-opacity=".55"/><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#2A93ED" flood-opacity=".9"/></filter></defs><g transform="translate(200 150) rotate(-24) scale(3)" filter="url(#bad-f)"><path d="M-50 0L-3.2 -9.6L50 0L-1.6 8.5Z" fill="url(#bad-g)"/><path d="M-50 0L-3.2 -9.6L50 0" fill="none" stroke="#fff" stroke-width=".5"/></g></svg></div><span>Add gradients, glows, highlights or shadows to a shard.</span></div>
           </div>
           <ul>
-            <li><span class="badge no">✕</span>Add bevels, metallic shine, glass or glow to anything but the logo artwork.</li>
+            <li><span class="badge no">✕</span>Add bevels, metallic shine or glow to anything but the logo artwork, or glass to anything but one panel over a photo.</li>
             <li><span class="badge no">✕</span>Stack gradients, or use more than one in a layout.</li>
           </ul>
         </div>
@@ -1773,7 +1819,7 @@ svg.nf { display: block; }
             <tr><td>People</td><td>Diverse (local and international), professionally dressed, candid and mid-task; not posing at the camera unless it is a portrait</td></tr>
             <tr><td>Places</td><td>Shown as they are; never move landmarks next to each other</td></tr>
             <tr><td>Editing</td><td>Minimal: exposure, crop, straighten and clean-up only</td></tr>
-            <tr><td>Text on photos</td><td>Use a calm area of the image, or darken only the area behind the text with navy</td></tr>
+            <tr><td>Text on photos</td><td>Use a calm area of the image, set it on one <a href="#glass">glass panel</a>, or darken only the area behind the text with navy</td></tr>
           </tbody>
         </table>
       </div>
@@ -1980,7 +2026,7 @@ svg.nf { display: block; }
         </ul></div>
         <div class="card"><h4><span class="badge no">✕</span>Don’t</h4><ul>
           <li><span class="badge no">✕</span>Generate, redraw or retype the logo or the star.</li>
-          <li><span class="badge no">✕</span>Use 3D, glossy or extruded stars, lens flares, light rays, glass effects or blue haze.</li>
+          <li><span class="badge no">✕</span>Use 3D, glossy or extruded stars, lens flares, light rays or blue haze, or glass anywhere but one panel over a photo.</li>
           <li><span class="badge no">✕</span>Substitute other fonts (Arsenal is a sans-serif, never a serif), or use Arsenal Bold.</li>
           <li><span class="badge no">✕</span>Add checkmarks in circles, icon bubbles, emoji or boxed text cards.</li>
           <li><span class="badge no">✕</span>Use all-caps or pill-shaped buttons, gradients or drop shadows.</li>
