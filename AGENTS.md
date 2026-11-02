@@ -29,6 +29,5 @@ If `BRAND.md` and `index.html` disagree, `BRAND.md` wins.
 ## Don't
 
 - Don't edit the logo files or fonts, and don't edit `BRAND.md` unless you're asked to.
-- Don't use files marked "Proposed" (`07 Flat Lockups (Proposed)`, `NovaVentures_Symbol_FlatBlue`) until `BRAND.md` says they are approved.
 - Don't invent facts, figures, quotes or contact details. Leave a `[placeholder]`.
 - Don't add creatives, experiments or working files to this folder.

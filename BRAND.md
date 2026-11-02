@@ -230,8 +230,6 @@ On white, Cloud or Light Grey gives the silver sweep more contrast than pure whi
 
 **Lockups:** horizontal (default) · vertical (square layouts, limited width) · symbol (avatars, icons) · wordmark (only when the symbol appears elsewhere).
 
-**Status:** the flat lockups (`07 Flat Lockups (Proposed)`) and `NovaVentures_Symbol_FlatBlue` are awaiting client sign-off. **Do not use them** until this file says they are approved.
-
 ---
 
 ## 6. Graphics: the Shard System
